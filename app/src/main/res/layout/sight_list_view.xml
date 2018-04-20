@@ -7,9 +7,11 @@
 
     <ImageView
         android:id="@+id/sightImage"
-        android:layout_width="100px"
-        android:layout_height="100px"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+
         android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +25,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:textStyle="bold"
 
         app:layout_constraintStart_toEndOf="@+id/sightImage"
         app:layout_constraintTop_toTopOf="parent"

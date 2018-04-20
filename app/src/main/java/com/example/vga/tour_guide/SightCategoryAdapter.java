@@ -38,6 +38,19 @@ public class SightCategoryAdapter extends FragmentPagerAdapter {
 
     public int getCount(){return 4;}
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (position == 0) {
+            return mContext.getString(R.string.cat_landmark);
+        } else if (position == 1) {
+            return mContext.getString(R.string.cat_museum);
+        } else if (position == 2) {
+            return mContext.getString(R.string.cat_restaurants);
+        } else {
+            return mContext.getString(R.string.cat_bars);
+        }
+    }
+
 
 
 }

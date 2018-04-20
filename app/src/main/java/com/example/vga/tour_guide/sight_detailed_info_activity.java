@@ -9,5 +9,8 @@ public class sight_detailed_info_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sight_detailed_info_activity);
+
+
+
     }
 }

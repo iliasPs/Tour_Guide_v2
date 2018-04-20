@@ -1,10 +1,13 @@
 package com.example.vga.tour_guide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -41,6 +44,27 @@ public class LandmarksFragment extends Fragment {
         SightAdapter adapter = new SightAdapter(getActivity(), sights);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Sight sight = sights.get(position);
+                Intent sightSend = new Intent(getActivity(), sight_detailed_info_activity.class);
+                sightSend.putExtra("sight", sight);
+
+                Log.v("does it click?", "yes!" );
+                startActivity(sightSend);
+
+
+            }
+        });
+
+
+
+
+
+
         return rootView;
     }
 

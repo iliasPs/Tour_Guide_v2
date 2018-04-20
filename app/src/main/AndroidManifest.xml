@@ -16,7 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sight_detailed_info_activity"></activity>
+        <activity android:name=".sight_detailed_info_activity"
+            android:label="Sight Info">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.vga.tour_guide.MainActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>
